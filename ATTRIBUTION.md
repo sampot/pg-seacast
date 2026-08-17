@@ -1,21 +1,30 @@
-# Attribution（pg-seacast）
+# 素材署名
 
-本遊戲使用以下資源（即使 CC0 仍署名）：
+本遊戲程式與原創介面以 MIT 授權；下列第三方素材依各自授權使用。即使 CC0 不要求署名，本專案仍主動列出來源。
 
-## 美術
-- Kenney.nl packs（CC0）— 見 `assets/licenses/` 與 [game-assets/ATTRIBUTION.md](https://github.com/sampot/playgrounds/blob/main/game-assets/ATTRIBUTION.md)
-- 角色／圖示依類型取自 Toon Characters、Sports Pack、Pixel Platformer、Pixel Shmup、Playing Cards、Boardgame Pack、Food Kit、Fish Pack 等
+## Kenney
 
-## 音效
-- Kenney UI Audio、Impact Sounds、Casino Audio、RPG Audio（CC0）
+作者：[Kenney Vleugels](https://kenney.nl)
 
-## 音樂
-- Dylann Taylor — BLIPPY BITS（Loop）https://dylanntaylor.itch.io/blippy-bits
-- HydroGene — High Quality 16-bit RPG Music（部分策略／RPG 曲）https://hydrogene.itch.io/high-quality-16bit-music
+- **Fish Pack 2.0** — 魚群與海岸場景 PNG
+  - 來源：https://kenney.nl/assets/fish-pack
+  - 授權：CC0 1.0
+- **UI Audio** — `click.ogg`
+  - 來源：https://kenney.nl/assets/ui-audio
+  - 授權：CC0 1.0
+- **Impact Sounds** — `splash.ogg`、`catch.ogg`、`snap.ogg`
+  - 來源：https://kenney.nl/assets/impact-sounds
+  - 授權：CC0 1.0
 
-## 類型
-- 開放釣魚養成：魚圖鑑、漁場天氣、裝備。
+授權副本位於 `assets/licenses/kenney-*.txt`。
 
-## Original release work
+## Not Jam
 
-The interface graphics, canvas art, synthesized music, and sound effects in this release are original procedural work created for **潮間釣夢**. The third-party packs listed above remain bundled for provenance but are not loaded at runtime.
+- 作者：Not Jam
+- 使用：`bgm.ogg`（ChillMenu）
+- 來源：https://not-jam.itch.io/
+- 授權：依 itch 頁面與 pack 附檔（本 repo 僅使用 Standalone OGG 循環樂段）
+
+## 遊戲內 credits
+
+港邊釣夢 · 素材見本檔與遊戲內「製作與素材署名」連結。

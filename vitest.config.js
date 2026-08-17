@@ -1,1 +1,5 @@
-module.exports = { test: { include: ["*.test.js"] } };
+module.exports = {
+  test: {
+    include: ["game/*.test.js", "*.test.js"],
+  },
+};

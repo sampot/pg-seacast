@@ -1,1 +1,81 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b0d10"><link rel="stylesheet" href="./styles.css"><title>Game</title></head><body><main><header><div><small id="genre"></small><h1 id="title"></h1></div><button id="sound" aria-pressed="false">♫ 音效</button></header><section id="intro"><div class="sigil">◆</div><p id="help"></p><button id="start" class="primary">進入遊戲</button><a href="./ATTRIBUTION.md">製作與素材署名</a></section><section id="game" hidden><div id="stats"></div><div id="scene"></div><p id="message" aria-live="polite"></p><div id="actions"></div></section></main><script type="module" src="./app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#081018" />
+    <title>港邊釣夢</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div>
+          <small>海釣養成</small>
+          <h1>港邊釣夢</h1>
+        </div>
+        <button id="mute-btn" class="icon-btn" type="button" aria-pressed="false">
+          ♫ 音效
+        </button>
+      </header>
+
+      <section id="intro" class="panel">
+        <p class="intro-copy">
+          選漁場、看天候、換裝備，在張力安全區收線。集齊六種魚完成圖鑑；季節有限，體力會隨每次出竿消耗。
+        </p>
+        <button id="start-btn" class="primary" type="button">開始釣季</button>
+        <a class="credits-link" href="./ATTRIBUTION.md">製作與素材署名</a>
+      </section>
+
+      <section id="game" hidden>
+        <div class="hud" id="hud"></div>
+        <p id="message" aria-live="polite"></p>
+
+        <div id="hub" class="panel">
+          <div class="spot-row" id="spot-row"></div>
+          <div class="bait-row" id="bait-row"></div>
+          <div class="action-row">
+            <button id="upgrade-rod" type="button">升級釣竿</button>
+            <button id="upgrade-line" type="button">升級魚線</button>
+            <button id="enter-fish" class="primary" type="button">前往釣點</button>
+            <button id="rest-day" type="button">休息一晚</button>
+          </div>
+          <div class="dex-grid" id="dex-grid"></div>
+        </div>
+
+        <div id="playfield" hidden>
+          <div id="canvas-wrap">
+            <canvas id="scene" width="390" height="320"></canvas>
+            <div class="tension-wrap">
+              <div class="tension-label">
+                <span>張力</span>
+                <span id="phase-label">待機</span>
+              </div>
+              <div id="tension-bar">
+                <div id="tension-sweet"></div>
+                <div id="tension-fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="cast-btn" class="primary" type="button">拋竿</button>
+            <button id="reel-btn" type="button" aria-pressed="false">按住收線</button>
+          </div>
+          <button id="back-hub" type="button">返回整理裝備</button>
+        </div>
+
+        <section id="end" class="panel end-panel" hidden>
+          <h2 id="end-title"></h2>
+          <p id="end-copy"></p>
+          <button id="restart-btn" class="primary" type="button">再開一季</button>
+        </section>
+      </section>
+    </div>
+
+    <div id="toast" class="toast" hidden role="status"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
